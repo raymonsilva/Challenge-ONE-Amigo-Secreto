@@ -29,3 +29,15 @@ function exibirAmigos() {
     });
 }
 
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert('Adicione amigos antes de sortear!');
+        return;
+    }
+
+    let amigoSecreto = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById('resultado').textContent = `Amigo Secreto: ${amigoSecreto}`;
+}
+
+document.getElementById('adicionar').addEventListener('click', adicionarAmigo);
+document.getElementById('sortear').addEventListener('click', sortearAmigoSecreto);
