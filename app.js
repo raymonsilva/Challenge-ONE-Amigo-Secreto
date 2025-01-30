@@ -18,3 +18,14 @@ function adicionarAmigo() {
     exibirAmigos();
 }
 
+function exibirAmigos() {
+    let listaAmigos = document.getElementById('listaAmigos');
+    listaAmigos.innerHTML = '';
+
+    amigos.forEach(function(amigo) {
+        let li = document.createElement('li');
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    });
+}
+
